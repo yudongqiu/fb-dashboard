@@ -20,42 +20,42 @@ const appRoutes = [
   {
     path: "/dashboard",
     sidebarName: "Dashboard",
-    navbarName: "Material Dashboard",
+    navbarName: "ForceBalance Dashboard",
     icon: Dashboard,
     component: DashboardPage
   },
   {
-    path: "/user",
-    sidebarName: "User Profile",
-    navbarName: "Profile",
+    path: "/input",
+    sidebarName: "Input Profile",
+    navbarName: "Input Profile",
     icon: Person,
     component: UserProfile
   },
   {
-    path: "/table",
-    sidebarName: "Table List",
-    navbarName: "Table List",
+    path: "/status",
+    sidebarName: "Job Status",
+    navbarName: "Job Status",
     icon: ContentPaste,
     component: TableList
   },
   {
-    path: "/typography",
-    sidebarName: "Typography",
-    navbarName: "Typography",
+    path: "/objectives",
+    sidebarName: "Objectives",
+    navbarName: "Objectives",
     icon: LibraryBooks,
     component: Typography
   },
   {
-    path: "/icons",
-    sidebarName: "Icons",
-    navbarName: "Icons",
+    path: "/analysis",
+    sidebarName: "Analysis",
+    navbarName: "Analysis",
     icon: BubbleChart,
     component: Icons
   },
   {
-    path: "/maps",
-    sidebarName: "Maps",
-    navbarName: "Map",
+    path: "/projects",
+    sidebarName: "Projects",
+    navbarName: "Projects",
     icon: LocationOn,
     component: Maps
   },
