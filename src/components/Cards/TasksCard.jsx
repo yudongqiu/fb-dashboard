@@ -9,11 +9,11 @@ import {
   Tabs,
   Tab
 } from "material-ui";
-import { BugReport, Code, Cloud } from "material-ui-icons";
+import { BugReport, Create, Assignment } from "material-ui-icons";
 
 import { Tasks } from "components";
 
-import { bugs, website, server } from "variables/general";
+import { issues, conclusions, todos } from "variables/general";
 
 import tasksCardStyle from "variables/styles/tasksCardStyle";
 
@@ -34,7 +34,7 @@ class TasksCard extends React.Component {
             title: classes.cardTitle,
             content: classes.cardHeaderContent
           }}
-          title="Tasks:"
+          title="Notes:"
           action={
             <Tabs
               classes={{
@@ -53,7 +53,7 @@ class TasksCard extends React.Component {
                   rootInheritSelected: classes.rootInheritSelected
                 }}
                 icon={<BugReport className={classes.tabIcon} />}
-                label={"Bugs"}
+                label={"Issues"}
               />
               <Tab
                 classes={{
@@ -62,8 +62,8 @@ class TasksCard extends React.Component {
                   label: classes.label,
                   rootInheritSelected: classes.rootInheritSelected
                 }}
-                icon={<Code className={classes.tabIcon} />}
-                label={"Website"}
+                icon={<Create className={classes.tabIcon} />}
+                label={"Conclusions"}
               />
               <Tab
                 classes={{
@@ -72,8 +72,8 @@ class TasksCard extends React.Component {
                   label: classes.label,
                   rootInheritSelected: classes.rootInheritSelected
                 }}
-                icon={<Cloud className={classes.tabIcon} />}
-                label={"Server"}
+                icon={<Assignment className={classes.tabIcon} />}
+                label={"To-dos"}
               />
             </Tabs>
           }
@@ -83,8 +83,8 @@ class TasksCard extends React.Component {
             <Typography component="div">
               <Tasks
                 checkedIndexes={[0, 3]}
-                tasksIndexes={[0, 1, 2, 3]}
-                tasks={bugs}
+                tasksIndexes={[0, 1, 2, 3, 4]}
+                tasks={issues}
               />
             </Typography>
           )}
@@ -92,8 +92,8 @@ class TasksCard extends React.Component {
             <Typography component="div">
               <Tasks
                 checkedIndexes={[0]}
-                tasksIndexes={[0, 1]}
-                tasks={website}
+                tasksIndexes={[0, 1, 2]}
+                tasks={conclusions}
               />
             </Typography>
           )}
@@ -101,8 +101,8 @@ class TasksCard extends React.Component {
             <Typography component="div">
               <Tasks
                 checkedIndexes={[1]}
-                tasksIndexes={[0, 1, 2]}
-                tasks={server}
+                tasksIndexes={[0, 1, 2, 3]}
+                tasks={todos}
               />
             </Typography>
           )}

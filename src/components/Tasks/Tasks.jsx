@@ -59,7 +59,7 @@ class Tasks extends React.Component {
               <TableCell className={classes.tableActions}>
                 <Tooltip
                   id="tooltip-top"
-                  title="Edit Task"
+                  title="Edit"
                   placement="top"
                   classes={{ tooltip: classes.tooltip }}
                 >

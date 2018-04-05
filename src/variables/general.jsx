@@ -2,25 +2,28 @@
 // // // Tasks for TasksCard - see Dashboard view
 // #############################
 
-var bugs = [
-  'Sign contract for "What are conference organizers afraid of?"',
-  "Lines From Great Russian Literature? Or E-mails From My Boss?",
-  "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-  "Create 4 Invisible User Experiences you Never Knew About"
+var issues = [
+  'Experimental data for dielectric constants not complete',
+  'Initial charge parameters needs improvement',
+  'Fitting on interaction energies not good enough',
+  'Evaluation on surface tension objectives too slow',
+  'Not enough memory when using PBC box size larger than 5 nm',
 ];
-var website = [
-  "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-  'Sign contract for "What are conference organizers afraid of?"'
+var conclusions = [
+  'High surface tension lead to more structured bahavior',
+  'Structural parametrization allows flexible fitting of dielectric constant',
+  'MP2 interaction energies are within 1 kcal/mol to CCSD(T) values',
 ];
-var server = [
-  "Lines From Great Russian Literature? Or E-mails From My Boss?",
-  "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-  'Sign contract for "What are conference organizers afraid of?"'
+var todos = [
+  'Decrease the weight for density target',
+  'Implement analytic gradient forluma for surface tension parameterization',
+  'Try Tip4P model',
+  'Write the paper',
 ];
 
 module.exports = {
   // these 3 are used to create the tasks lists in TasksCard - Dashboard view
-  bugs,
-  website,
-  server
+  issues,
+  conclusions,
+  todos
 };

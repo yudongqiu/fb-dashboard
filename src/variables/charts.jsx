@@ -17,8 +17,8 @@ var delays2 = 80,
 
 const objectiveValueChart = {
   data: {
-    labels: ["1", "2", "3", "4", "5", "6", "7"],
-    series: [[38.7, 17.4, 10.1, 7.5, 6.4, 5.3, 5.0]]
+    labels: ["1", "2", "3", "4", "5"],
+    series: [[38.7, 17.4, 8.1, 7.4, 7.5]]
   },
   options: {
     lineSmooth: Chartist.Interpolation.cardinal({

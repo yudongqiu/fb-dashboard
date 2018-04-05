@@ -56,12 +56,12 @@ class Dashboard extends React.Component {
             <StatsCard
               icon={Toc}
               iconColor="orange"
-              title="Tasks Status"
+              title="Job Status"
               description="34/50"
               small="finished"
               statIcon={Description}
               statIconColor="blue"
-              statLink={{ text: "View Finished Tasks...", href: "#pablo" }}
+              statLink={{ text: "View Finished Jobs...", href: "#pablo" }}
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>
@@ -116,7 +116,7 @@ class Dashboard extends React.Component {
                     <ArrowDownward
                       className={this.props.classes.upArrowCardCategory}
                     />{" "}
-                    55%
+                    81%
                   </span>{" "}
                   decrease from initial state.
                 </span>
@@ -170,17 +170,18 @@ class Dashboard extends React.Component {
           <ItemGrid xs={12} sm={12} md={6}>
             <RegularCard
               headerColor="orange"
-              cardTitle="Employees Stats"
-              cardSubtitle="New employees on 15th September, 2016"
+              cardTitle="Optimization Stats"
+              cardSubtitle="Iteration 5 finished at 17:00, Apr. 1st"
               content={
                 <Table
                   tableHeaderColor="warning"
-                  tableHead={["ID", "Name", "Salary", "Country"]}
+                  tableHead={["Iter", "X2", "Change", "Grad", "Step Qual"]}
                   tableData={[
-                    ["1", "Dakota Rice", "$36,738", "Niger"],
-                    ["2", "Minerva Hooper", "$23,789", "Curaçao"],
-                    ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
-                    ["4", "Philip Chaney", "$38,735", "Korea, South"]
+                    ["1", "38.7", "", "8.4e+03", "0.0"],
+                    ["2", "17.4", "-21.3", "4.9e+02", "1.0"],
+                    ["3", "8.1", "-9.3", "1.4e+02", "0.1"],
+                    ["4", "7.4", "-0.7", "1.0e+02", "2.1"],
+                    ["5", "7.5", "+0.1", "2.7e+01", "-3.4"],
                   ]}
                 />
               }

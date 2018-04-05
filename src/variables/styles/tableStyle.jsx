@@ -50,9 +50,11 @@ const tableStyle = theme => ({
   },
   tableCell: {
     ...defaultFont,
+    fontSize: "1em",
     lineHeight: "1.42857143",
     padding: "12px 8px",
-    verticalAlign: "middle"
+    verticalAlign: "middle",
+    Align: "center"
   },
   tableResponsive: {
     width: "100%",

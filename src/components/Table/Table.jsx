@@ -19,7 +19,7 @@ function CustomTable({ ...props }) {
       <Table className={classes.table}>
         {tableHead !== undefined ? (
           <TableHead className={classes[tableHeaderColor + "TableHeader"]}>
-            <TableRow>
+            <TableRow hover>
               {tableHead.map((prop, key) => {
                 return (
                   <TableCell
