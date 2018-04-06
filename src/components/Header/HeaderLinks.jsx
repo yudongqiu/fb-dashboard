@@ -101,31 +101,31 @@ class HeaderLinks extends React.Component {
                       onClick={this.handleClose}
                       className={classes.dropdownItem}
                     >
-                      Mike John responded to your email
+                      Optimization "SurfTen" has finished
                     </MenuItem>
                     <MenuItem
                       onClick={this.handleClose}
                       className={classes.dropdownItem}
                     >
-                      You have 5 new tasks
+                      The weight of "density" target might be too low
                     </MenuItem>
                     <MenuItem
                       onClick={this.handleClose}
                       className={classes.dropdownItem}
                     >
-                      You're now friend with Andrew
+                      Objective value increased at iteration 5
                     </MenuItem>
                     <MenuItem
                       onClick={this.handleClose}
                       className={classes.dropdownItem}
                     >
-                      Another Notification
+                      Error occurred with worker "c5-64"
                     </MenuItem>
                     <MenuItem
                       onClick={this.handleClose}
                       className={classes.dropdownItem}
                     >
-                      Another One
+                      Stability analyses finished for "nonbonded cutoff"
                     </MenuItem>
                   </MenuList>
                 </Paper>

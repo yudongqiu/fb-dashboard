@@ -24,8 +24,8 @@ function UserProfile({ ...props }) {
                 <Grid container>
                   <ItemGrid xs={12} sm={12} md={5}>
                     <CustomInput
-                      labelText="Company (disabled)"
-                      id="company-disabled"
+                      labelText="ProjectID (disabled)"
+                      id="projectid-disabled"
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -36,8 +36,8 @@ function UserProfile({ ...props }) {
                   </ItemGrid>
                   <ItemGrid xs={12} sm={12} md={3}>
                     <CustomInput
-                      // labelText="Username"
-                      id="username"
+                      labelText="Title"
+                      id="Title"
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -45,7 +45,7 @@ function UserProfile({ ...props }) {
                   </ItemGrid>
                   <ItemGrid xs={12} sm={12} md={4}>
                     <CustomInput
-                      labelText="Email address"
+                      labelText="Localtion"
                       id="email-address"
                       formControlProps={{
                         fullWidth: true

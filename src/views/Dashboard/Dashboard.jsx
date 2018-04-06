@@ -69,7 +69,7 @@ class Dashboard extends React.Component {
               icon={People}
               iconColor="green"
               title="Workers"
-              description="20/30"
+              description="16/30"
               statIcon={DateRange}
               statLink={{ text: "View Queue Status...", href: "#pablo" }}
             />
