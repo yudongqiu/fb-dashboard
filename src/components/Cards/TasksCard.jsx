@@ -83,7 +83,6 @@ class TasksCard extends React.Component {
             <Typography component="div">
               <Tasks
                 checkedIndexes={[0, 3]}
-                tasksIndexes={[0, 1, 2, 3, 4]}
                 tasks={issues}
               />
             </Typography>
@@ -92,7 +91,6 @@ class TasksCard extends React.Component {
             <Typography component="div">
               <Tasks
                 checkedIndexes={[0]}
-                tasksIndexes={[0, 1, 2]}
                 tasks={conclusions}
               />
             </Typography>
@@ -101,7 +99,6 @@ class TasksCard extends React.Component {
             <Typography component="div">
               <Tasks
                 checkedIndexes={[1]}
-                tasksIndexes={[0, 1, 2, 3]}
                 tasks={todos}
               />
             </Typography>

@@ -22,10 +22,10 @@ const tasksCardStyle = theme => ({
   cardTitle: {
     ...defaultFont,
     float: "left",
-    padding: "10px 10px 10px 0",
     lineHeight: "24px",
-    fontSize: "14px",
-    color: "#FFFFFF"
+    fontSize: "1em",
+    color: "#FFFFFF",
+    marginLeft: "10px",
   },
   tabWrapper: {
     width: "auto",
@@ -66,12 +66,12 @@ const tasksCardStyle = theme => ({
     paddingLeft: "12px"
   },
   cardHeaderContent: {
-    flex: "none"
+    flex: "none",
   },
   label: {
     lineHeight: "19px",
     textTransform: "uppercase",
-    fontSize: "12px",
+    fontSize: "16px",
     fontWeight: "400",
     marginLeft: "-10px"
   },

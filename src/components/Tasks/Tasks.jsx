@@ -16,26 +16,44 @@ import PropTypes from "prop-types";
 import tasksStyle from "variables/styles/tasksStyle.jsx";
 
 class Tasks extends React.Component {
-  state = {
-    checked: this.props.checkedIndexes
-  };
+  constructor(props) {
+    super(props);
+    const { checkedIndexes, tasks } = props;
+    const checked = new Array(tasks.length).fill(false);
+    for (const i of checkedIndexes) {
+      checked[i] = true;
+    }
+    this.state = {
+      tasks: tasks,
+      checked: checked,
+    };
+  }
+
   handleToggle = value => () => {
     const { checked } = this.state;
-    const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
-
-    if (currentIndex === -1) {
-      newChecked.push(value);
-    } else {
-      newChecked.splice(currentIndex, 1);
-    }
-
+    newChecked[value] = !newChecked[value];
     this.setState({
       checked: newChecked
     });
   };
+
+  handleDelete = value => () => {
+    const { checked, tasks } = this.state;
+    const newTasks = [...tasks];
+    newTasks.splice(value, 1);
+    const newChecked = [...checked];
+    newChecked.splice(value, 1);
+    this.setState({
+      tasks: newTasks,
+      checked: newChecked,
+    });
+  }
+
   render() {
-    const { classes, tasksIndexes, tasks } = this.props;
+    const { classes } = this.props;
+    const { tasks } = this.state;
+    const tasksIndexes = Array.from(tasks.keys());
     return (
       <Table className={classes.table}>
         <TableBody>
@@ -43,7 +61,7 @@ class Tasks extends React.Component {
             <TableRow key={value} className={classes.tableRow}>
               <TableCell className={classes.tableCell}>
                 <Checkbox
-                  checked={this.state.checked.indexOf(value) !== -1}
+                  checked={this.state.checked[value]}
                   tabIndex={-1}
                   onClick={this.handleToggle(value)}
                   checkedIcon={<Check className={classes.checkedIcon} />}
@@ -83,6 +101,7 @@ class Tasks extends React.Component {
                   <IconButton
                     aria-label="Close"
                     className={classes.tableActionButton}
+                    onClick={this.handleDelete(value)}
                   >
                     <Close
                       className={
