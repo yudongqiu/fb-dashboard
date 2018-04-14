@@ -61,7 +61,7 @@ class Dashboard extends React.Component {
               small="done"
               statIcon={Description}
               statIconColor="blue"
-              statLink={{ text: "View Finished Jobs...", href: "#pablo" }}
+              statLink={{ text: "View Finished Jobs...", href: "#status" }}
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>
@@ -72,7 +72,7 @@ class Dashboard extends React.Component {
               description="16/30"
               small="busy"
               statIcon={DateRange}
-              statLink={{ text: "View Queue Status...", href: "#pablo" }}
+              statLink={{ text: "View Queue Status...", href: "#status" }}
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>
@@ -82,7 +82,7 @@ class Dashboard extends React.Component {
               title="Failed Jobs"
               description="12"
               statIcon={Error}
-              statLink={{ text: "Error Log...", href: "#pablo" }}
+              statLink={{ text: "Error Log...", href: "#notifications" }}
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>
@@ -123,7 +123,7 @@ class Dashboard extends React.Component {
                 </span>
               }
               statIcon={AccessTime}
-              statText="updated 4 minutes ago"
+              statLink={{ text: "View Details...", href: "#objectives" }}
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={4}>
@@ -142,7 +142,7 @@ class Dashboard extends React.Component {
               title="Objective Breakdown"
               text="Lastest Iteration"
               statIcon={AccessTime}
-              statText="evaluated 4 minitues ago"
+              statLink={{ text: "View Details...", href: "#objectives" }}
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={4}>
