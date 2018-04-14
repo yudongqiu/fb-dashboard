@@ -9,7 +9,7 @@ function TypographyPage({ ...props }) {
       <ItemGrid xs={12} sm={12} md={12}>
         <RegularCard
           plainCard
-          cardTitle="Objection Breakdown"
+          cardTitle="Objection Function Breakdown"
           cardSubtitle="Current Iteration: 5"
           content={
             <Table

@@ -71,7 +71,6 @@ const tasksCardStyle = theme => ({
   label: {
     lineHeight: "19px",
     textTransform: "uppercase",
-    fontSize: "16px",
     fontWeight: "400",
     marginLeft: "-10px"
   },

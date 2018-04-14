@@ -139,7 +139,7 @@ class Dashboard extends React.Component {
                 />
               }
               chartColor="orange"
-              title="Objective Breakdown"
+              title="Objective Function Breakdown"
               text="Lastest Iteration"
               statIcon={AccessTime}
               statLink={{ text: "View Details...", href: "#objectives" }}
@@ -160,7 +160,7 @@ class Dashboard extends React.Component {
               title="Parameter Changes"
               text="Relative to prior width"
               statIcon={AccessTime}
-              statText="evaluated 4 minitues ago"
+              statText="Evaluated 4 minitues ago"
             />
           </ItemGrid>
         </Grid>

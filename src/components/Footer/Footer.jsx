@@ -38,8 +38,6 @@ function Footer({ ...props }) {
             &copy; {1900 + new Date().getYear()}{" "}
             <a href="http://www.lpwchem.org/" target="_blank" className={classes.a}>
               L-P Wang Group
-            </a>, made with support from <a href="http://www.molssi.org/" target="_blank" className={classes.a}>
-              MolSSI
             </a>
           </span>
         </p>

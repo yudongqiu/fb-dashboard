@@ -26,8 +26,8 @@ const appRoutes = [
   },
   {
     path: "/input",
-    sidebarName: "Input Profile",
-    navbarName: "Input Profile",
+    sidebarName: "Job Input",
+    navbarName: "Job Input",
     icon: Person,
     component: UserProfile
   },

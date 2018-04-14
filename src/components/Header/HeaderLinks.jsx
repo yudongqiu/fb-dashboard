@@ -52,6 +52,7 @@ class HeaderLinks extends React.Component {
           <Search className={classes.searchIcon} />
         </SearchButton>
         <IconButton
+          href="#dashboard"
           color="inherit"
           aria-label="Dashboard"
           className={classes.buttonLink}
