@@ -22,12 +22,12 @@ function Footer({ ...props }) {
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="https://github.com/yudongqiu/fb-dashboard" target="_blank" className={classes.block}>
+              <a href="https://github.com/yudongqiu/fb-dashboard" target="_blank" rel="noopener noreferrer" className={classes.block}>
                 Github
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="https://github.com/yudongqiu/fb-dashboard/commits/master" target="_blank" className={classes.block}>
+              <a href="https://github.com/yudongqiu/fb-dashboard/commits/master" target="_blank" rel="noopener noreferrer" className={classes.block}>
                 Blog
               </a>
             </ListItem>
@@ -36,7 +36,7 @@ function Footer({ ...props }) {
         <p className={classes.right}>
           <span>
             &copy; {1900 + new Date().getYear()}{" "}
-            <a href="http://www.lpwchem.org/" target="_blank" className={classes.a}>
+            <a href="http://www.lpwchem.org/" target="_blank" rel="noopener noreferrer" className={classes.a}>
               L-P Wang Group
             </a>
           </span>

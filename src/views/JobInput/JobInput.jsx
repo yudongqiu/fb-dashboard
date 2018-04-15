@@ -11,7 +11,7 @@ import {
 
 import avatar from "assets/img/faces/marc.jpg";
 
-function UserProfile({ ...props }) {
+function JobInput({ ...props }) {
   return (
     <div>
       Page under construction.
@@ -19,4 +19,4 @@ function UserProfile({ ...props }) {
   );
 }
 
-export default UserProfile;
+export default JobInput;

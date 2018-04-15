@@ -6,7 +6,7 @@ import { RegularCard, P, A, ItemGrid } from "components";
 
 import iconsStyle from "variables/styles/iconsStyle";
 
-function Icons({ ...props }) {
+function ProjectsPage({ ...props }) {
   return (
     <Grid container>
       Page under construction.
@@ -14,8 +14,8 @@ function Icons({ ...props }) {
   );
 }
 
-Icons.propTypes = {
+ProjectsPage.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(iconsStyle)(Icons);
+export default withStyles(iconsStyle)(ProjectsPage);

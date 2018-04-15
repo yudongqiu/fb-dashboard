@@ -162,8 +162,51 @@ const parameterChangesChart = {
   }
 };
 
+// ##############################
+// // // Sensitivity Analysis
+// #############################
+
+const sensitivityAnalysisChart = {
+  data: {
+    labels: ["Weight1", "Weight2", "Nonbonded Cutoff", "PriorWidth1", "NSteps"],
+    series: [[0.3, 0.1, 0.7, 0.6, 0.2]]
+  },
+  options: {
+    lineSmooth: Chartist.Interpolation.cardinal({
+      tension: 0
+    }),
+    low: 0,
+    high: 1,
+    chartPadding: {
+      top:50,
+      right: 15,
+      bottom: 0,
+      left: 20
+    },
+    height: 500,
+  },
+  animation: {
+    draw: function(data) {
+      if (data.type === "bar") {
+        data.element.animate({
+          y2: {
+            begin: 500,
+            dur: 800,
+            from: data.y1,
+            to: data.y2,
+            easing: Chartist.Svg.Easing.easeOutQuint
+          }
+        });
+      }
+    }
+  }
+};
+
 module.exports = {
   objectiveValueChart,
   objectiveItemsChart,
-  parameterChangesChart
+  parameterChangesChart,
+  sensitivityAnalysisChart
 };
+
+

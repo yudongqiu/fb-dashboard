@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import classNames from "classnames";
 import { Manager, Target, Popper } from "react-popper";
 import {
@@ -28,6 +29,7 @@ class HeaderLinks extends React.Component {
   handleClose = () => {
     this.setState({ open: false });
   };
+
   render() {
     const { classes } = this.props;
     const { open } = this.state;
@@ -99,34 +101,44 @@ class HeaderLinks extends React.Component {
                 <Paper className={classes.dropdown}>
                   <MenuList role="menu">
                     <MenuItem
+                      component={Link}
+                      to="/logs"
                       onClick={this.handleClose}
                       className={classes.dropdownItem}
                     >
                       Optimization "SurfTen" has finished
                     </MenuItem>
                     <MenuItem
+                      component={Link}
+                      to="/logs"
                       onClick={this.handleClose}
                       className={classes.dropdownItem}
                     >
                       The weight of "density" target might be too low
                     </MenuItem>
                     <MenuItem
+                      component={Link}
+                      to="/logs"
                       onClick={this.handleClose}
                       className={classes.dropdownItem}
                     >
                       Objective value increased at iteration 5
                     </MenuItem>
                     <MenuItem
+                      component={Link}
+                      to="/logs"
                       onClick={this.handleClose}
                       className={classes.dropdownItem}
                     >
-                      Error occurred with worker "c5-64"
+                      Job failed on worker "c5-64"
                     </MenuItem>
                     <MenuItem
+                      component={Link}
+                      to="/analysis"
                       onClick={this.handleClose}
                       className={classes.dropdownItem}
                     >
-                      Stability analyses finished for "nonbonded cutoff"
+                      Stability analyses finished for "Nonbonded Cutoff"
                     </MenuItem>
                   </MenuList>
                 </Paper>

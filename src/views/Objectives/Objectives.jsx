@@ -3,7 +3,7 @@ import { Grid } from "material-ui";
 
 import { RegularCard, Table, ItemGrid } from "components";
 
-function TypographyPage({ ...props }) {
+function ObjectivesPage({ ...props }) {
   return (
     <Grid container>
       <ItemGrid xs={12} sm={12} md={12}>
@@ -34,4 +34,4 @@ function TypographyPage({ ...props }) {
   );
 }
 
-export default TypographyPage;
+export default ObjectivesPage;

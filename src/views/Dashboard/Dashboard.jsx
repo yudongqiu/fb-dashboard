@@ -80,9 +80,9 @@ class Dashboard extends React.Component {
               icon={InfoOutline}
               iconColor="red"
               title="Failed Jobs"
-              description="12"
+              description="4"
               statIcon={Error}
-              statLink={{ text: "Error Log...", href: "#notifications" }}
+              statLink={{ text: "Error Log...", href: "#logs" }}
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>

@@ -59,7 +59,6 @@ const sidebarStyle = theme => ({
       content: '""',
       position: "absolute",
       bottom: "0",
-
       height: "1px",
       right: "15px",
       width: "calc(100% - 30px)",
@@ -77,7 +76,7 @@ const sidebarStyle = theme => ({
     lineHeight: "30px",
     textDecoration: "none",
     backgroundColor: "transparent",
-    "&,&:hover": {
+    "&:visited": {
       color: "#FFFFFF"
     }
   },
@@ -89,7 +88,7 @@ const sidebarStyle = theme => ({
     marginRight: "15px"
   },
   img: {
-    width: "35px",
+    height: "30px",
     top: "22px",
     position: "absolute",
     verticalAlign: "middle",

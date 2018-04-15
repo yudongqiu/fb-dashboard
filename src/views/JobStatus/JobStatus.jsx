@@ -3,7 +3,7 @@ import { Grid } from "material-ui";
 
 import { RegularCard, Table, ItemGrid } from "components";
 
-function TableList({ ...props }) {
+function JobStatus({ ...props }) {
   return (
     <Grid container>
       <ItemGrid xs={12} sm={12} md={12}>
@@ -11,9 +11,10 @@ function TableList({ ...props }) {
           plainCard
           cardTitle="Job Status"
           cardSubtitle="Current Iteration: 5"
+          headerColor="red"
           content={
             <Table
-              tableHeaderColor="primary"
+              tableHeaderColor="danger"
               tableHead={["ID", "Name", "Info", "Started", "Ended", "Node"]}
               tableData={[
                 ["1", "Energy", "cluster1/CCSD(T)", "14:30", "15:20", "g4-2"],
@@ -31,4 +32,4 @@ function TableList({ ...props }) {
   );
 }
 
-export default TableList;
+export default JobStatus;

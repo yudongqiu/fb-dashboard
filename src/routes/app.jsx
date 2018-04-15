@@ -1,10 +1,10 @@
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
-import UserProfile from "views/UserProfile/UserProfile.jsx";
-import TableList from "views/TableList/TableList.jsx";
-import Typography from "views/Typography/Typography.jsx";
-import Icons from "views/Icons/Icons.jsx";
-import Maps from "views/Maps/Maps.jsx";
-import NotificationsPage from "views/Notifications/Notifications.jsx";
+import JobInputPage from "views/JobInput/JobInput.jsx";
+import JobStatusPage from "views/JobStatus/JobStatus.jsx";
+import ObjectivesPage from "views/Objectives/Objectives.jsx";
+import ProjectsPage from "views/Projects/Projects.jsx";
+import AnalysisPage from "views/Analysis/Analysis.jsx";
+import LogsPage from "views/Logs/Logs.jsx";
 
 import {
   Dashboard,
@@ -29,42 +29,42 @@ const appRoutes = [
     sidebarName: "Job Input",
     navbarName: "Job Input",
     icon: Person,
-    component: UserProfile
+    component: JobInputPage
   },
   {
     path: "/status",
     sidebarName: "Job Status",
     navbarName: "Job Status",
     icon: ContentPaste,
-    component: TableList
+    component: JobStatusPage
   },
   {
     path: "/objectives",
     sidebarName: "Objectives",
     navbarName: "Objectives",
     icon: LibraryBooks,
-    component: Typography
+    component: ObjectivesPage
   },
   {
     path: "/analysis",
     sidebarName: "Analysis",
     navbarName: "Analysis",
     icon: BubbleChart,
-    component: Icons
+    component: AnalysisPage
   },
   {
     path: "/projects",
     sidebarName: "Projects",
     navbarName: "Projects",
     icon: LocationOn,
-    component: Maps
+    component: ProjectsPage
   },
   {
-    path: "/notifications",
-    sidebarName: "Notifications",
-    navbarName: "Notifications",
+    path: "/logs",
+    sidebarName: "Logs",
+    navbarName: "Logs",
     icon: Notifications,
-    component: NotificationsPage
+    component: LogsPage
   },
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];
