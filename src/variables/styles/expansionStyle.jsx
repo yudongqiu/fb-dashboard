@@ -24,7 +24,7 @@ const expansionStyle = {
     position: "relative",
     padding: "0px",
     lineHeight: "20px",
-    marginTop: "10px",
+    marginTop: "0px",
     marginBottom: "10px",
     fontSize: "14px",
     backgroundColor: "white",
