@@ -14,7 +14,13 @@ import avatar from "assets/img/faces/marc.jpg";
 function JobInput({ ...props }) {
   return (
     <div>
-      Page under construction.
+      <ProfileCard
+        title="Job Input"
+        subtitle="Project Water Surface Tension"
+        description="Input parameters"
+      >
+
+      </ProfileCard>
     </div>
   );
 }

@@ -22,6 +22,12 @@ import IconButton from "./CustomButtons/IconButton.jsx";
 import CustomInput from "./CustomInput/CustomInput.jsx";
 
 // ##############################
+// // // Expansion
+// #############################
+
+import Expansion from "./Expansion/Expansion.jsx";
+
+// ##############################
 // // // Footer
 // #############################
 
@@ -92,6 +98,8 @@ export {
   IconButton,
   // CustomInput
   CustomInput,
+  // Expansion
+  Expansion,
   // Footer
   Footer,
   // Grid
