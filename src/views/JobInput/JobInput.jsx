@@ -8,12 +8,12 @@ import { FormControl, FormHelperText, FormLabel } from 'material-ui/Form';
 import Select from 'material-ui/Select';
 import TextField from 'material-ui/TextField';
 import { FileUpload } from "material-ui-icons";
+import IconButton from 'material-ui/IconButton';
+import Button from 'material-ui/Button';
 
 import {
   ProfileCard,
   RegularCard,
-  Button,
-  IconButton,
   CustomInput,
   ItemGrid
 } from "components";
@@ -27,15 +27,25 @@ const styles = theme => ({
     display: 'none',
   },
   formControl: {
-    margin: 15,
-  }
+    paddingBottom: "10px",
+    margin: "27px 0 0 0",
+    position: "relative"
+  },
+  labelRoot: {
+    color: "#999999",
+    fontWeight: "400",
+    fontSize: "16px",
+    whiteSpace: "nowrap",
+    lineHeight: "1.42857"
+  },
 });
 
 class JobInput extends React.Component {
   state = {
     filename: '',
-    jobtype: 'optimize',
+    jobType: 'optimize',
     maxStep: 100,
+    penType: 'L2',
     convO: 0.0001,
     convS: 0.0001,
     convG: 0.0001,
@@ -70,6 +80,7 @@ class JobInput extends React.Component {
                 }}
                 inputProps={{
                   value: this.state.filename,
+                  placeholder: "Click Upload Button",
                   endAdornment: (
                     <InputAdornment position="end">
                       <input type="file" id="file-upload" className={classes.input} onChange={this.selectFile} />
@@ -79,25 +90,29 @@ class JobInput extends React.Component {
                         </IconButton>
                       </label>
                     </InputAdornment>
-                  )
+                  ),
+                  error: !this.state.filename
                 }}
+
               />
             </ItemGrid>
             <ItemGrid xs={12} sm={12} md={4}>
-              <CustomInput
-                labelText="Job Type"
-                id="job-type"
-                formControlProps={{
-                  fullWidth: true
-                }}
-                inputProps={{
-                  value: "Optimize"
-                }}
-              />
+              <FormControl fullWidth={true} className={classes.formControl} >
+                <InputLabel htmlFor="job-type" className={classes.labelRoot} >Job Type</InputLabel>
+                <Select
+                  value={this.state.jobType}
+                  onChange={this.handleChange}
+                  input={<Input name="jobType" id="job-type" />}
+                >
+                  <MenuItem value={"optimize"}>Optimize</MenuItem>
+                  <MenuItem value={"single"}>Single</MenuItem>
+                  <MenuItem value={"gradient"}>Gradient</MenuItem>
+                </Select>
+              </FormControl>
             </ItemGrid>
             <ItemGrid xs={12} sm={12} md={3}>
               <CustomInput
-                labelText="Max Step"
+                labelText="Max Steps"
                 id="max-step"
                 formControlProps={{
                   fullWidth: true
@@ -117,17 +132,17 @@ class JobInput extends React.Component {
               />
             </ItemGrid>
             <ItemGrid xs={12} sm={12} md={3}>
-              <CustomInput
-                labelText="Penalty Type"
-                id="penalty-type"
-                formControlProps={{
-                  fullWidth: true
-                }}
-                inputProps={{
-                  value: "L2"
-                }}
-                success
-              />
+              <FormControl fullWidth={true} className={classes.formControl} >
+                <InputLabel htmlFor="penalty-type" className={classes.labelRoot} >Penalty Type</InputLabel>
+                <Select
+                  value={this.state.penType}
+                  onChange={this.handleChange}
+                  input={<Input name="penType" id="penalty-type" />}
+                >
+                  <MenuItem value={"L1"}>L1</MenuItem>
+                  <MenuItem value={"L2"}>L2</MenuItem>
+                </Select>
+              </FormControl>
             </ItemGrid>
             <ItemGrid xs={12} sm={12} md={3}>
               <CustomInput
