@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { Grid } from "material-ui";
 import { withStyles } from 'material-ui/styles';
-import Input, { InputLabel } from 'material-ui/Input';
+import Input, { InputLabel, InputAdornment } from 'material-ui/Input';
 import { MenuItem } from 'material-ui/Menu';
 import { FormControl, FormHelperText, FormLabel } from 'material-ui/Form';
 import Select from 'material-ui/Select';
+import TextField from 'material-ui/TextField';
 import { FileUpload } from "material-ui-icons";
 
 import {
@@ -26,22 +27,35 @@ const styles = theme => ({
     display: 'none',
   },
   formControl: {
-    margin: 10,
-    minWidth: 120,
-  },
-  selectEmpty: {
-    marginTop: 10 * 2,
-  },
+    margin: 15,
+  }
 });
 
 class JobInput extends React.Component {
   state = {
+    filename: '',
     jobtype: 'optimize',
+    maxStep: 100,
+    convO: 0.0001,
+    convS: 0.0001,
+    convG: 0.0001,
+    trustR: 0.15,
+    finiteH: 0.001,
   }
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   }
+
+  selectFile = event => {
+    const file = event.target.files[0];
+    if (file) {
+      this.setState({
+        filename: file.name,
+      });
+    }
+  }
+
   render () {
     const { classes } = this.props;
     const inputForm = (
@@ -53,6 +67,19 @@ class JobInput extends React.Component {
                 id="force-field-file"
                 formControlProps={{
                   fullWidth: true
+                }}
+                inputProps={{
+                  value: this.state.filename,
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <input type="file" id="file-upload" className={classes.input} onChange={this.selectFile} />
+                      <label htmlFor="file-upload">
+                        <IconButton component="span">
+                          <FileUpload />
+                        </IconButton>
+                      </label>
+                    </InputAdornment>
+                  )
                 }}
               />
             </ItemGrid>
@@ -76,8 +103,17 @@ class JobInput extends React.Component {
                   fullWidth: true
                 }}
                 inputProps={{
-                  value: 100
+                  value: this.state.maxStep,
+                  name: 'maxStep',
+                  onChange: this.handleChange,
+                  type: "number",
+                  inputProps: {
+                    min: 1,
+                    step: 1,
+                  },
+                  error: !(this.state.maxStep > 0)
                 }}
+                error={!(this.state.maxStep > 0)}
               />
             </ItemGrid>
             <ItemGrid xs={12} sm={12} md={3}>
@@ -90,6 +126,7 @@ class JobInput extends React.Component {
                 inputProps={{
                   value: "L2"
                 }}
+                success
               />
             </ItemGrid>
             <ItemGrid xs={12} sm={12} md={3}>
@@ -99,8 +136,18 @@ class JobInput extends React.Component {
                   fullWidth: true
                 }}
                 inputProps={{
-                  value: 0.0001
+                  value: this.state.convO,
+                  name: 'convO',
+                  onChange: this.handleChange,
+                  type: "number",
+                  inputProps: {
+                    min: 0,
+                    max: 0.01,
+                    step: 0.0001,
+                  },
+                  error: !(this.state.convO > 0)
                 }}
+                error={!(this.state.convO > 0)}
               />
             </ItemGrid>
             <ItemGrid xs={12} sm={12} md={3}>
@@ -110,8 +157,18 @@ class JobInput extends React.Component {
                   fullWidth: true
                 }}
                 inputProps={{
-                  value: 0.0001
+                  value: this.state.convS,
+                  name: 'convS',
+                  onChange: this.handleChange,
+                  type: "number",
+                  inputProps: {
+                    min: 0,
+                    max: 0.01,
+                    step: 0.0001,
+                  },
+                  error: !(this.state.convS > 0)
                 }}
+                error={!(this.state.convS > 0)}
               />
             </ItemGrid>
             <ItemGrid xs={12} sm={12} md={3}>
@@ -121,8 +178,18 @@ class JobInput extends React.Component {
                   fullWidth: true
                 }}
                 inputProps={{
-                  value: 0.0001
+                  value: this.state.convG,
+                  name: 'convG',
+                  onChange: this.handleChange,
+                  type: "number",
+                  inputProps: {
+                    min: 0,
+                    max: 0.01,
+                    step: 0.0001,
+                  },
+                  error: !(this.state.convG > 0)
                 }}
+                error={!(this.state.convG > 0)}
               />
             </ItemGrid>
             <ItemGrid xs={12} sm={12} md={3}>
@@ -132,8 +199,18 @@ class JobInput extends React.Component {
                   fullWidth: true
                 }}
                 inputProps={{
-                  value: 0.15
+                  value: this.state.trustR,
+                  name: 'trustR',
+                  onChange: this.handleChange,
+                  type: "number",
+                  inputProps: {
+                    min: 0,
+                    step: 0.01,
+                  },
+                  error: !(this.state.trustR > 0)
                 }}
+                error={!(this.state.trustR > 0)}
+                success={(this.state.trustR > 0.1) && (this.state.trustR < 0.2)}
               />
             </ItemGrid>
             <ItemGrid xs={12} sm={12} md={3}>
@@ -143,7 +220,13 @@ class JobInput extends React.Component {
                   fullWidth: true
                 }}
                 inputProps={{
-                  value: 0.001
+                  value: this.state.finiteH,
+                  name: "finiteH",
+                  onChange: this.handleChange,
+                  type: "number",
+                  inputProps: {
+                    step: 0.001,
+                  },
                 }}
               />
             </ItemGrid>

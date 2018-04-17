@@ -42,6 +42,7 @@ const iconButtonStyle = {
     userSelect: "none",
     backgroundImage: "none",
     backgroundColor: grayColor,
+    color: "#FFFFFF",
     "&:hover": {
       backgroundColor: grayColor,
       boxShadow:
