@@ -38,19 +38,19 @@ class TasksCard extends React.Component {
           action={
             <Tabs
               classes={{
-                flexContainer: classes.tabsContainer
+                flexContainer: classes.tabsContainer,
+                indicator: classes.displayNone,
               }}
               value={this.state.value}
               onChange={this.handleChange}
-              indicatorClassName={classes.displayNone}
               textColor="inherit"
             >
               <Tab
                 classes={{
                   wrapper: classes.tabWrapper,
-                  rootLabelIcon: classes.labelIcon,
+                  labelIcon: classes.labelIcon,
                   label: classes.label,
-                  rootInheritSelected: classes.rootInheritSelected
+                  textColorInheritSelected: classes.textColorInheritSelected
                 }}
                 icon={<BugReport className={classes.tabIcon} />}
                 label={"Issues"}
@@ -58,9 +58,9 @@ class TasksCard extends React.Component {
               <Tab
                 classes={{
                   wrapper: classes.tabWrapper,
-                  rootLabelIcon: classes.labelIcon,
+                  labelIcon: classes.labelIcon,
                   label: classes.label,
-                  rootInheritSelected: classes.rootInheritSelected
+                  textColorInheritSelected: classes.textColorInheritSelected
                 }}
                 icon={<Create className={classes.tabIcon} />}
                 label={"Conclusions"}
@@ -68,9 +68,9 @@ class TasksCard extends React.Component {
               <Tab
                 classes={{
                   wrapper: classes.tabWrapper,
-                  rootLabelIcon: classes.labelIcon,
+                  labelIcon: classes.labelIcon,
                   label: classes.label,
-                  rootInheritSelected: classes.rootInheritSelected
+                  textColorInheritSelected: classes.textColorInheritSelected
                 }}
                 icon={<Assignment className={classes.tabIcon} />}
                 label={"To-dos"}
