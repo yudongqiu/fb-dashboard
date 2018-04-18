@@ -41,6 +41,7 @@ const customInputStyle = {
     color: "#999999",
     fontWeight: "400",
     fontSize: "16px",
+    whiteSpace: "nowrap",
     lineHeight: "1.42857"
   },
   labelRootError: {
